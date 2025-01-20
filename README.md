@@ -61,7 +61,7 @@
 
 ```bash
 
-git clone https://github.com/gotr00t0day/zwyck.git
+git clone https://github.com/ix-chel/zwyck.git
 
 cd zwyck
 
