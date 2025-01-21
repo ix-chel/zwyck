@@ -1,4 +1,3 @@
-"""
 from colorama import Fore, init, Style
 from os import path
 from builtwith import builtwith
@@ -54,7 +53,7 @@ import urllib
 import nmap3
 import ssl
 import shutil
-"""
+
 warnings.filterwarnings(action='ignore',module='bs4')
 
 requests.packages.urllib3.disable_warnings()
@@ -75,7 +74,7 @@ banner = f"""
 
 print(Fore.MAGENTA + banner)
 print(Fore.WHITE)
-"""
+
 def commands(cmd):
     try:
         subprocess.check_call(cmd, shell=True)
@@ -2984,4 +2983,3 @@ if args.heapdump:
 
 if args.heapdump_scan:
     commands(f"python3 modules/heapdump_scan.py --file {args.heapdump_scan}")
-"""
