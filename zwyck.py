@@ -364,7 +364,7 @@ async def update_script():
         
         # Create backup of current version
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        backup_path = os.path.join(backup_dir, f"spyhunt_backup_{timestamp}")
+        backup_path = os.path.join(backup_dir, f"zwyck_backup_{timestamp}")
         
         print(f"{Fore.YELLOW}Creating backup...{Style.RESET_ALL}")
         try:
@@ -389,7 +389,7 @@ async def update_script():
                                   check=True, capture_output=True, text=True).stdout.strip()
             
             if current == remote:
-                print(f"{Fore.GREEN}SpyHunt is already up to date!{Style.RESET_ALL}")
+                print(f"{Fore.GREEN}zwyck is already up to date!{Style.RESET_ALL}")
                 return True
                 
         except subprocess.CalledProcessError as e:
@@ -397,13 +397,13 @@ async def update_script():
             return False
 
         # Perform update
-        print(f"{Fore.CYAN}Updating SpyHunt...{Style.RESET_ALL}")
+        print(f"{Fore.CYAN}Updating zwyck...{Style.RESET_ALL}")
         try:
             # Pull changes
             result = subprocess.run(["git", "pull"], check=True, capture_output=True, text=True)
             
             if "Already up to date" in result.stdout:
-                print(f"{Fore.GREEN}SpyHunt is already up to date!{Style.RESET_ALL}")
+                print(f"{Fore.GREEN}zwyck is already up to date!{Style.RESET_ALL}")
             else:
                 print(f"{Fore.GREEN}Update successful!{Style.RESET_ALL}")
                 
@@ -415,8 +415,8 @@ async def update_script():
                                  check=True)
                     print(f"{Fore.GREEN}Dependencies updated!{Style.RESET_ALL}")
                 
-                print(f"\n{Fore.GREEN}SpyHunt has been updated successfully!{Style.RESET_ALL}")
-                print(f"{Fore.YELLOW}Please restart SpyHunt to apply the updates.{Style.RESET_ALL}")
+                print(f"\n{Fore.GREEN}zwyck has been updated successfully!{Style.RESET_ALL}")
+                print(f"{Fore.YELLOW}Please restart zwyck to apply the updates.{Style.RESET_ALL}")
             
             return True
 
