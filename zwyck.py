@@ -54,7 +54,6 @@ import nmap3
 import ssl
 import shutil
 
-
 warnings.filterwarnings(action='ignore',module='bs4')
 
 requests.packages.urllib3.disable_warnings()

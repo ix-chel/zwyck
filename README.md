@@ -1,3 +1,6 @@
+# AI-Assisted Reconnaissance and Vulnerability Analysis Tool for Enhanced Penetration Testing Efficiency
+
+
 # DESCRIPTION
 
 
@@ -58,7 +61,7 @@
 
 ```bash
 
-git clone https://github.com/gotr00t0day/zwyck.git
+git clone https://github.com/ix-chel/zwyck.git
 
 cd zwyck
 
@@ -67,11 +70,10 @@ pip3 install -r requirements.txt
 sudo python3 install.py
 
 ```
-
+<!--
 # USAGE 
 
 ```
-
 usage: zwyck.py [-h] [-sv filename.txt | -wl filename.txt] [-th 25] [-s domain.com]
                   [-t domain.com] [-d domains.txt] [-p domains.txt] [-r domains.txt]
                   [-b domains.txt] [-pspider domain.com] [-w https://domain.com]
@@ -342,3 +344,4 @@ Sprint Boot Actuator Scan
 ```
 python3 zwyck.py --heapds domains.txt
 ```
+-->
