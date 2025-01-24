@@ -1,0 +1,25 @@
+{
+  "name": "spyhunt-main",
+  "version": "1.0.0",
+  "description": "AI Pentest Tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ix-chel/zwyck.git"
+  },
+  "keywords": [
+    "pentest_tool"
+  ],
+  "author": "Yang Mulia iceL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ix-chel/zwyck/issues"
+  },
+  "homepage": "https://github.com/ix-chel/zwyck#readme",
+  "dependencies": {
+    "windows-foreground-love": "^0.5.0"
+  }
+}
