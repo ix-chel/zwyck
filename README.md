@@ -205,7 +205,7 @@ Fuzzing:
                         param miner
   -ch, --custom_headers domain.com
                         custom headers
-  -asn, --automoussystemnumber AS55555
+  -asn, --autonomoussystemnumber AS55555
                         asn
   -ar, --autorecon domain.com
                         auto recon
