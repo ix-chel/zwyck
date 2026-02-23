@@ -291,7 +291,7 @@ vuln_group.add_argument('-or', '--openredirect',
                     type=str, help='open redirect',
                     metavar='domain.com')
 
-fuzzing_group.add_argument('-asn', '--automoussystemnumber',
+fuzzing_group.add_argument('-asn', '--autonomoussystemnumber',
                     type=str, help='asn',
                     metavar='AS55555')
 
@@ -2516,9 +2516,9 @@ if args.openredirect:
         main()
 
 
-if args.automoussystemnumber:
+if args.autonomoussystemnumber:
     def get_ip_ranges(asn):
-        asn = args.automoussystemnumber
+        asn = args.autonomoussystemnumber
         url = f"https://stat.ripe.net/data/announced-prefixes/data.json?resource={asn}"
         
         try:
@@ -2541,13 +2541,13 @@ if args.automoussystemnumber:
     def main():
         results = {}
         with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as executor:
-            future_to_asn = {executor.submit(process_asn, asn): asn for asn in args.automoussystemnumber}
+            future_to_asn = {executor.submit(process_asn, asn): asn for asn in args.autonomoussystemnumber}
             for future in concurrent.futures.as_completed(future_to_asn):
                 asn, ip_ranges = future.result()
                 results[asn] = ip_ranges
 
         total_ranges = sum(len(ranges) for ranges in results.values())
-        print(f"\nFound a total of {total_ranges} IP ranges across {len(args.automoussystemnumber)} ASNs:")
+        print(f"\nFound a total of {total_ranges} IP ranges across {len(args.autonomoussystemnumber)} ASNs:")
 
         if args.save:
             with open(args.save, 'w') as f:
